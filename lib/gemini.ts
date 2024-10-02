@@ -1,7 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI(
-  "AIzaSyDgl1fiz-_fDqd7sAxuPyxwT7ZucOSxAwU" || "",
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEMINI_API_KEY! || "",
 );
 
 export async function reframeWithAI(content: string): Promise<string> {
